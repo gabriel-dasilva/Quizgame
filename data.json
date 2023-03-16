@@ -1,0 +1,382 @@
+{
+    "Harry Potter": [
+        {
+            "Question": "What Hogwarts house does Harry Potter Belong to?", 
+            "Answer": "Gryffindor", 
+            "Options":[ 
+                "Slytherin", 
+                "Hufflepuff", 
+                "Ravenclaw"
+            ]
+        },
+
+        {
+            "Question": "How are students sorted into their houses?", 
+            "Answer": "Sorting Hat", 
+            "Options": [
+                "Sorting Test", 
+                "Sorting Ceremony", 
+                "Sorting Wand"
+            ]
+        },
+
+        {
+            "Question": "What house is Draco Malfoy sorted into?",
+            "Answer": "Slytherin", 
+            "Options": [
+                "RavenClaw", 
+                "Hufflepuff",
+                "Gryffindor"
+            ]
+        }, 
+
+        {
+            "Question": "What wandcore does Harry Potters wand have?", 
+            "Answer": "Pheonix Feather", 
+            "Options": [
+                "Unicorn Hair",
+                "Dragon Heart String", 
+                "Troll Hair"
+            ]
+        }, 
+
+        {
+            "Question": "In the goblet of fire what did Harry Potter have to rescue from the dragons nest?", 
+            "Answer": "A Golden Egg", 
+            "Options": [
+                "A Broom",
+                "A Golden Snitch",
+                "A Map"
+            ]
+        }
+    ],
+
+    "One Piece Quiz": [
+        {
+            "Questions":" What is the name of Monkey D Luffys Devil Fruit ?", 
+            "Answer": "Gomu Gomu No Mi", 
+            "Options":[
+                " Magu Magu No Mi",
+                "Goro Goro No Mi",
+                "Ope Ope No Mi"
+                ]
+        },
+
+
+        {
+           " Question": "How many swords does Roronoa Zoro use when fighting ?", 
+            "Answer": 3, 
+            "Options": [
+                1, 
+                9,
+                2
+            ]
+        },
+
+        {
+            "Question": "What kind of animal is Tony Chopper ?", 
+            "Answer":" Reindeer", 
+
+            "Options": [
+                "Otter",
+                "Lion",
+                "Rabbit"
+                ]
+        }, 
+
+        {
+            "Question": "What is the name of Monkey D Luffy's first ship?", 
+            "Answer": "Going Merry ",
+            "Options": [
+                "Thousand Sunny", 
+                "Red Force",
+                "The Flying Dutchman"
+            ]
+        },
+
+        {
+            "Question": "What is painted on Moneky D Luffy's Jolly Roger ?", 
+            "Answer": "A Skull and Bones wearing a straw hat", 
+            "Options": [
+                "A Skull and Bones surronded by sweets", 
+                "A Skull and Bones with three scars",
+                "A Skull and Bones wearing a top hat"
+            ]
+        } 
+    ],
+
+    "PlayStation": [
+            {
+                "Question": "What is the name of the studio that produced The Last Of Us?", 
+                "Answer": "Naughty Dog", 
+                "Options": [
+                    "343 Studios",
+                    "Blizzard",
+                    "Sucker Punch"
+                ]
+            }, 
+
+            {
+                "Question": "What Marvel franchise is Insomniac famouse for developing?", 
+                "Answer": "Spiderman", 
+                "Options":[ 
+                    "Wolverine",
+                    "The Hulk",
+                    "Batman"
+                ] 
+            },
+            
+           {
+                "Question": "What colour is the PlayStation 5?", 
+                "Answer": "White and Black", 
+                "Options": [
+                    "Black and Blue",
+                    "Pink and Red",
+                    "Blue and White"
+                ]
+            },
+
+            {
+                "Question": "What is the name of the main character in God of war?", 
+                "Answer": "Kratos", 
+                "Options": [
+                    "Zeus", 
+                    "Aries", 
+                    "Jeff"
+                ] 
+            },
+
+            {
+                "Question": "How many main line Uncharted games have been released ?", 
+                "Answer": "5", 
+                "Options":[ 
+                    "4",
+                    "2",
+                    "7"
+                ]
+            } 
+        ],
+
+    "Sports" :[
+        {
+            "Question": "Which country has won the most soccer World Cups?",         
+            "Answer": "Brazil", 
+            "Options": [
+                "Germany",
+                "France",
+                "South Africa"
+            ]
+        }, 
+
+        {
+            "Question": "In which year did China host the Olympics?", 
+            "Answer": "2008", 
+            "Options": [
+                "2004",
+                "2012",
+                "2000"
+            ]
+        }, 
+
+        {
+            "Question": "How many rugby World Cups has South Africa won?", 
+            "Answer": "3",
+            "Options": [
+                "1",
+                "2",
+                "4"
+            ]
+        }, 
+
+        {
+            "Question":"What is the 100m sprint record?", 
+            "Answer": "9.58s", 
+            "Options": [
+                "9.78s",
+                "9.85s", 
+                "9.52s"
+            ]
+        },    
+
+        {
+            "Question":"Who has the most F1 Driver's Championships?",   
+            "Answer": "Lewis Hamilton", 
+            "Options": [
+                "Fernando Alonso",
+                "Sebastian Vettel",
+                "NikiLaude"
+            ]
+        } 
+    ],
+
+    "Geography" :[
+        {
+            "Question":"What is the largest continent in size?", 
+            "Answer": "Asia", 
+            "Options": [
+                "Africa",
+                "Europe",
+                "North America"
+            ]
+        }, 
+
+        {
+            "Question":"Which is the smallest country in size?", 
+            "Answer": "Vatican City", 
+            "Options": [
+                "Naura",
+                "Tonga", 
+                "Samoa"
+            ]
+        }, 
+
+        {
+            "Question":"In which country is the tallest mountain?", 
+            "Answer": "Nepal", 
+            "Options": [
+                "Switzerland",
+                "Greenland",
+                "Slovakia"
+            ]
+        }, 
+
+        {
+            "Question":"Which is the largest ocean?", 
+            "Answer": "Pacific Ocean",
+            "Options": [
+                "Atlantic Ocean",
+                "Indian Ocean",
+                "Arctic Ocean"
+            ] 
+        },
+
+        {
+            "Question":"What is the size of the Sahara desert?", 
+            "Answer": "9 200 000 km2", 
+            "Options": [
+                "10 000 000 km2", 
+                "9 500 000 km2 ", 
+                "9 000 000 km2"
+            ]
+        }, 
+
+        {
+            "Question":"What is the capital of Italy?", 
+            "Answer": "Rome", 
+            "Options": [
+                "Florence", 
+                "Venice", 
+                "Naples"
+            ]
+        } 
+    ],
+
+    "Science" : [
+        {
+            "Question": "What does a 'light year' measure?", 
+            "Answer": "Distance", 
+            "Options": [
+                "Sound", 
+                "Time",
+                "Speed"
+            ]
+        },
+
+        {
+            "Question": "Photosynthesis is a process created by?",
+            "Answer": "Plants", 
+            "Options": [
+                "Animals", 
+                "Food", 
+                "Cameras"
+            ]
+        }, 
+
+        {
+            "Question": "How many bones are in the human body?",
+            "Answer": "206", 
+            "Options": [
+                "106", 
+                "156", 
+                "256"
+            ]
+        }, 
+
+        {
+            "Question": "How much of the Earth's surface is covered in water?", 
+            "Answer": "70%",
+            "Options": [
+                "20%",
+                "40%",
+                "50%"
+            ]
+        }, 
+
+        {
+            "Question": "In which food will you find the most Vitamin C?", 
+            "Answer": "Vitamin C", 
+            "Options": [
+                "Meat",
+                "Fish",
+                "Cereal"
+            ]
+        }
+    ], 
+    "Math":[
+        {
+            "Question": "121 Divided by 11 is",
+            "Answer": "11",
+            "Options": [
+                "11",
+                "10",
+                "19",
+                "18"
+            ]
+        },
+
+        {
+            "Question": "Solve 3 + 6 × ( 5 + 4) ÷ 3 - 7",
+            "Answer": "14",
+            "Options": [
+                "11",
+                "16",
+                "14",
+                "15"
+            ]
+        },
+
+        {
+            "Question": "Solve 23 + 3 ÷ 3",
+            "Answer": "24",
+            "Options": [
+                "24",
+                "25",
+                "26",
+                "27"
+            ]
+        },
+
+        {
+            "Question": "Add the Decimals 5.23 + 8.79",
+            "Answer": "14.02",
+            "Options": [
+                "14.19",
+                "14.11",
+                "14.02",
+                "14.29"
+            ]
+        },
+        
+        {
+            "Question": "The Product of 131 x 0 x 300 x 4",
+            "Answer": "0",
+            "Options": [
+                "11",
+                "0",
+                "46",
+                "45"
+            ]
+        }
+    ]
+
+}
