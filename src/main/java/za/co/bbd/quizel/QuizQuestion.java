@@ -1,10 +1,10 @@
 package za.co.bbd.quizel;
 
-public class QuizQuestions {
+public class QuizQuestion {
     public String Question;
     public String Answer;
     public String[] Options;
-    public QuizQuestions(String ques, String ans, String[] opt){
+    public QuizQuestion(String ques, String ans, String[] opt){
         Question = ques;
         Answer = ans;
         Options = opt;
