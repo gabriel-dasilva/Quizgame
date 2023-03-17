@@ -1,26 +1,18 @@
 package za.co.bbd.quizel;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.List;
+
+@Getter
+@ToString
+@AllArgsConstructor
 public class Genre {
-    public String GenreDescription;
-    public QuizQuestion[] GenreQuestions;
-    public Genre(String genreDesc){
-        GenreDescription = genreDesc;
-        GenreQuestions = loadGenreQuestions(genreDesc);
-    }
+    public final String GenreDescription;
 
-    // Returns an array of questions depending on what the Genre Description is
-    private QuizQuestion[] loadGenreQuestions(String genreDesc){
-        QuizQuestion[] genreQuestions = {};
-
-        // ToDo: Add functionality to read the questions into the genreQuestions using the genreDescription
-
-        return genreQuestions;
-    }
-    public String getGenreDescription() {
-        return GenreDescription;
-    }
-
-    public QuizQuestion[] getGenreQuestions() {
-        return GenreQuestions;
-    }
+    public List<QuizQuestion> GenreQuestions;
 }
+
