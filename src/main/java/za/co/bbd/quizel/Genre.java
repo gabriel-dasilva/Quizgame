@@ -20,15 +20,7 @@ public class Genre {
         return GenreDescription;
     }
 
-    public void setGenreDescription(String genreDescription) {
-        GenreDescription = genreDescription;
-    }
-
     public QuizQuestion[] getGenreQuestions() {
         return GenreQuestions;
-    }
-
-    public void setGenreQuestions(QuizQuestion[] genreQuestions) {
-        GenreQuestions = genreQuestions;
     }
 }
