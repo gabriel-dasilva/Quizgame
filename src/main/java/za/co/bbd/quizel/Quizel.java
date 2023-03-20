@@ -1,18 +1,17 @@
 package za.co.bbd.quizel;
 
-import java.util.Scanner;
+
+// import za.co.bbd.quizel.utils.JsonDataMapper;
 
 public class Quizel
-{
-    public static void main( String[] args )
+{   
+    void begin( String[] args )
     {
         // TODO: Start game loop
-        Commands userInputs = new Commands();
         System.out.println( "Welcome to quizel!" );
-        Scanner sc = new Scanner(System.in);
-
-        while(true){
-            userInputs.ProcessInput(sc.nextLine());
-        }
     }
+
+    //  System.out.println(genres.get(0).GenreDescription);
+
+
 }
