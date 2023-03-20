@@ -8,6 +8,8 @@ import org.json.simple.parser.ParseException;
 import za.co.bbd.quizel.Genre;
 import za.co.bbd.quizel.QuizQuestion;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,10 +26,16 @@ public class JsonDataMapper {
         JSONParser parser = new JSONParser();
         JSONObject gameData;
         try {
-            gameData = (JSONObject) parser.parse(filePath.getPath());
+            assert filePath != null;
+            try (FileReader reader = new FileReader(filePath.getPath())
+            ) {
+                gameData = (JSONObject) parser.parse(reader);
+            }
         } catch (ParseException ex) {
             // TODO:  add logging
             return new ArrayList<Genre>();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         Gson gson = new Gson();
@@ -35,17 +43,17 @@ public class JsonDataMapper {
 
         // TODO: Get map entries and use them to generate genres in reusable method
         List<QuizQuestion> harryPotterQuestions = gson
-                .fromJson((String) gameData.get("Harry Potter"), conversionType);
+                .fromJson(gameData.get("Harry Potter").toString(), conversionType);
         List<QuizQuestion> onePieceQuestions = gson
-                .fromJson((String) gameData.get("One Piece Quiz"), conversionType);
+                .fromJson(gameData.get("One Piece Quiz").toString(), conversionType);
         List<QuizQuestion> playStationQuestions = gson
-                .fromJson((String) gameData.get("PlayStation"), conversionType);
+                .fromJson(gameData.get("PlayStation").toString(), conversionType);
         List<QuizQuestion> sportsQuestions = gson
-                .fromJson((String) gameData.get("Sports"), conversionType);
+                .fromJson(gameData.get("Sports").toString(), conversionType);
         List<QuizQuestion> scienceQuestions = gson
-                .fromJson((String) gameData.get("Science"), conversionType);
+                .fromJson(gameData.get("Science").toString(), conversionType);
         List<QuizQuestion> mathQuestions = gson
-                .fromJson((String) gameData.get("Math"), conversionType);
+                .fromJson(gameData.get("Math").toString(), conversionType);
 
         List<Genre> genres = new ArrayList<Genre>();
         genres.add(new Genre("Harry Potter", harryPotterQuestions));
