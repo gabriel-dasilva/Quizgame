@@ -1,21 +1,21 @@
 package za.co.bbd.quizel;
 
 public class QuizQuestion {
-    public String Question;
-    public String Answer;
-    public String[] Options;
-    public QuizQuestion(String ques, String ans, String[] opt){
-        Question = ques;
-        Answer = ans;
-        Options = opt;
+    public String question;
+    public String answer;
+    public String[] options;
+    public QuizQuestion(String question, String answer, String[] options){
+        this.question = question;
+        this.answer = answer;
+        this.options = options;
     }
     public String getQuestion() {
-        return Question;
+        return this.question;
     }
     public String getAnswer() {
-        return Answer;
+        return this.answer;
     }
     public String[] getOptions() {
-        return Options;
+        return this.options;
     }
 }
