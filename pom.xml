@@ -5,8 +5,8 @@
   <artifactId>quizel</artifactId>
   <packaging>jar</packaging>
   <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
   </properties>
   <version>1.0-SNAPSHOT</version>
   <name>quizel</name>
@@ -40,6 +40,16 @@
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.10.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.6</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>

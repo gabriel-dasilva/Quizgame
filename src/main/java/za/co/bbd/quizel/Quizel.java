@@ -1,5 +1,9 @@
 package za.co.bbd.quizel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import za.co.bbd.quizel.models.Genre;
+import za.co.bbd.quizel.models.QuizQuestion;
 import za.co.bbd.quizel.utils.JsonDataMapper;
 
 import java.util.List;
@@ -8,8 +12,17 @@ import java.util.Scanner;
 
 public class Quizel
 {
-    void begin( )
-    {
+    private static final Logger log = LoggerFactory.getLogger(Quizel.class);
+
+    public static void main( String[] args ) {
+        /* ToDO - Use file reading class to read genre's into an array of Genre class objects. The Genre class will have
+         * functionality that will read in the questions for each genre.
+         */
+        Quizel quiz = new Quizel();
+        quiz.begin();
+    }
+
+    void begin( ) {
         // TODO: Start game loop
         Commands userInputs = new Commands();
         System.out.println( "Welcome to quizel!" );
@@ -30,7 +43,7 @@ public class Quizel
 
         int count = 1;
         for (Genre genreOption : data){
-            System.out.println(count + ". " + genreOption.GenreDescription);
+            System.out.println(count + ". " + genreOption.GenreDescription());
             count++;
         }
         System.out.println(count + ". " + "Random");
@@ -45,25 +58,25 @@ public class Quizel
             String userGenre = sc.nextLine(); //handle user input
             List<QuizQuestion> questions;
             if (count == Integer.parseInt(userGenre)){
-                questions = data.get(rand.nextInt(data.size()-1)).GenreQuestions;
+                questions = data.get(rand.nextInt(data.size()-1)).GenreQuestions();
                 System.out.println("============================================================================================");
-                System.out.println( "Begin " +  data.get(rand.nextInt(data.size()-1)).GenreDescription + " Quiz!");
+                System.out.println( "Begin " +  data.get(rand.nextInt(data.size()-1)).GenreDescription() + " Quiz!");
                 System.out.println("============================================================================================");
             } else {
-                questions = data.get(Integer.parseInt(userGenre)-1).GenreQuestions;
+                questions = data.get(Integer.parseInt(userGenre)-1).GenreQuestions();
                 System.out.println("============================================================================================");
-                System.out.println( "Begin " +  data.get(Integer.parseInt(userGenre)-1).GenreDescription + " Quiz!");
+                System.out.println( "Begin " +  data.get(Integer.parseInt(userGenre)-1).GenreDescription() + " Quiz!");
                 System.out.println("============================================================================================");
             }
 
             countTotal = questions.size();
 
             for(QuizQuestion q: questions){
-                System.out.println(q.getQuestion());
-                System.out.println("A : " +q.getOptions()[0]);
-                System.out.println("B : " +q.getOptions()[1]);
-                System.out.println("C : " +q.getOptions()[2]);
-                System.out.println("D : " +q.getOptions()[3]);
+                System.out.println(q.question());
+                System.out.println("A : " +q.options().get(0));
+                System.out.println("B : " +q.options().get(1));
+                System.out.println("C : " +q.options().get(2));
+                System.out.println("D : " +q.options().get(3));
 
                 // userInputs.ProcessInput(sc.nextLine()); //Handle user input
                 String userAnswer = sc.nextLine();
@@ -73,24 +86,16 @@ public class Quizel
 
                 String answer = "";
 
-                switch(ans)
-                {
-                    case 'A':
-                        answer = q.getOptions()[0];
-                        break;
-                    case 'B':
-                        answer = q.getOptions()[1];
-                        break;
-                    case 'C':
-                        answer = q.getOptions()[2];
-                        break;
-                    case 'D':
-                        answer = q.getOptions()[3];
-                        break;
-                    default:break;
+                switch (ans) {
+                    case 'A' -> answer = q.options().get(0);
+                    case 'B' -> answer = q.options().get(1);
+                    case 'C' -> answer = q.options().get(2);
+                    case 'D' -> answer = q.options().get(3);
+                    default -> {
+                    }
                 }
 
-                if(answer.equals(q.getAnswer()))
+                if(answer.equals(q.answer()))
                 {
                     System.out.println("------------------------------------------------------");
                     System.out.println("                  Correct Answer                      ");
