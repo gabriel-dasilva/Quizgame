@@ -3,6 +3,7 @@ package za.co.bbd.quizel;
 import za.co.bbd.quizel.utils.JsonDataMapper;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Quizel
@@ -32,18 +33,30 @@ public class Quizel
             System.out.println(count + ". " + genreOption.GenreDescription);
             count++;
         }
+        System.out.println(count + ". " + "Random");
 
         System.out.println();
-        System.out.println( "[Q]uit: Quit game" ); // Handle user input
+        System.out.println( "[M]enu: Go to menu                  [Q]uit: Quit game" ); // Handle user input
         boolean temp = true;
+        Random rand = new Random();
+
         while(temp){
 //            userInputs.ProcessInput(sc.nextLine());
             String userGenre = sc.nextLine(); //handle user input
-            List<QuizQuestion> questions = data.get(Integer.parseInt(userGenre)-1).GenreQuestions;
+            List<QuizQuestion> questions;
+            if (count == Integer.parseInt(userGenre)){
+                questions = data.get(rand.nextInt(data.size()-1)).GenreQuestions;
+                System.out.println("============================================================================================");
+                System.out.println( "Begin " +  data.get(rand.nextInt(data.size()-1)).GenreDescription + " Quiz!");
+                System.out.println("============================================================================================");
+            } else {
+                questions = data.get(Integer.parseInt(userGenre)-1).GenreQuestions;
+                System.out.println("============================================================================================");
+                System.out.println( "Begin " +  data.get(Integer.parseInt(userGenre)-1).GenreDescription + " Quiz!");
+                System.out.println("============================================================================================");
+            }
+
             countTotal = questions.size();
-            System.out.println("============================================================================================");
-            System.out.println( "Begin " +  data.get(Integer.parseInt(userGenre)-1).GenreDescription + " Quiz!");
-            System.out.println("============================================================================================");
 
             for(QuizQuestion q: questions){
                 System.out.println(q.getQuestion());
