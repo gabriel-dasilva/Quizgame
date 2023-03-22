@@ -45,7 +45,7 @@ public class JsonDataMapper {
         List<QuizQuestion> harryPotterQuestions = gson
                 .fromJson(gameData.get("Harry Potter").toString(), conversionType);
         List<QuizQuestion> onePieceQuestions = gson
-                .fromJson(gameData.get("One Piece Quiz").toString(), conversionType);
+                .fromJson(gameData.get("One Piece").toString(), conversionType);
         List<QuizQuestion> playStationQuestions = gson
                 .fromJson(gameData.get("PlayStation").toString(), conversionType);
         List<QuizQuestion> sportsQuestions = gson
@@ -57,7 +57,7 @@ public class JsonDataMapper {
 
         List<Genre> genres = new ArrayList<Genre>();
         genres.add(new Genre("Harry Potter", harryPotterQuestions));
-        genres.add(new Genre("One Piece Quiz", onePieceQuestions));
+        genres.add(new Genre("One Piece", onePieceQuestions));
         genres.add(new Genre("Playstation", playStationQuestions));
         genres.add(new Genre("Sports", sportsQuestions));
         genres.add(new Genre("Science", scienceQuestions));
