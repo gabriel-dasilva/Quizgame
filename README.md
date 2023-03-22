@@ -2,7 +2,7 @@
 
 # **TODO**  : 
 - Global score for multipe games in one session
-- Update commands, to exit current game, quit the entire session, show results, handle user answers
+- Update commands, to exit current game, quit the entire session, handle user answers
 - Game session
 - update question count to be number of questions answered and not number of questions per category
 
