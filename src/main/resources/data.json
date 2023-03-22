@@ -1,19 +1,21 @@
 {
     "Harry Potter": [
         {
-            "Question": "What Hogwarts house does Harry Potter Belong to?", 
-            "Answer": "Gryffindor", 
-            "Options":[ 
+            "question": "What Hogwarts house does Harry Potter Belong to?",
+            "answer": "Gryffindor",
+            "options":[
                 "Slytherin", 
                 "Hufflepuff", 
-                "Ravenclaw"
+                "Ravenclaw",
+                "Gryffindor"
             ]
         },
 
         {
-            "Question": "How are students sorted into their houses?", 
-            "Answer": "Sorting Hat", 
-            "Options": [
+            "question": "How are students sorted into their houses?",
+            "answer": "Sorting Hat",
+            "options": [
+                "Sorting Hat",
                 "Sorting Test", 
                 "Sorting Ceremony", 
                 "Sorting Wand"
@@ -21,43 +23,47 @@
         },
 
         {
-            "Question": "What house is Draco Malfoy sorted into?",
-            "Answer": "Slytherin", 
-            "Options": [
+            "question": "What house is Draco Malfoy sorted into?",
+            "answer": "Slytherin",
+            "options": [
                 "RavenClaw", 
                 "Hufflepuff",
-                "Gryffindor"
+                "Gryffindor",
+                "Slytherin"
             ]
         }, 
 
         {
-            "Question": "What wandcore does Harry Potters wand have?", 
-            "Answer": "Pheonix Feather", 
-            "Options": [
+            "question": "What wandcore does Harry Potters wand have?",
+            "answer": "Pheonix Feather",
+            "options": [
                 "Unicorn Hair",
-                "Dragon Heart String", 
+                "Dragon Heart String",
+                "Pheonix Feather",
                 "Troll Hair"
             ]
         }, 
 
         {
-            "Question": "In the goblet of fire what did Harry Potter have to rescue from the dragons nest?", 
-            "Answer": "A Golden Egg", 
-            "Options": [
+            "question": "In the goblet of fire what did Harry Potter have to rescue from the dragons nest?",
+            "answer": "A Golden Egg",
+            "options": [
                 "A Broom",
+                "A Golden Egg",
                 "A Golden Snitch",
                 "A Map"
             ]
         }
     ],
 
-    "One Piece Quiz": [
+    "One Piece": [
         {
-            "Questions":" What is the name of Monkey D Luffys Devil Fruit ?", 
-            "Answer": "Gomu Gomu No Mi", 
-            "Options":[
+            "question": "What is the name of Monkey D Luffys Devil Fruit ?",
+            "answer": "Gomu Gomu No Mi",
+            "options":[
                 " Magu Magu No Mi",
                 "Goro Goro No Mi",
+                "Gomu Gomu No Mi",
                 "Ope Ope No Mi"
                 ]
         },
@@ -65,51 +71,56 @@
 
         {
            " Question": "How many swords does Roronoa Zoro use when fighting ?", 
-            "Answer": 3, 
-            "Options": [
-                1, 
-                9,
-                2
+            "answer": "3",
+            "options": [
+                "3",
+                "1",
+                "9",
+                "2"
             ]
         },
 
         {
-            "Question": "What kind of animal is Tony Chopper ?", 
-            "Answer":" Reindeer", 
+            "question": "What kind of animal is Tony Chopper ?",
+            "answer":"Reindeer",
 
-            "Options": [
+            "options": [
                 "Otter",
                 "Lion",
+                "Reindeer",
                 "Rabbit"
                 ]
         }, 
 
         {
-            "Question": "What is the name of Monkey D Luffy's first ship?", 
-            "Answer": "Going Merry ",
-            "Options": [
-                "Thousand Sunny", 
+            "question": "What is the name of Monkey D Luffy's first ship?",
+            "answer": "Going Merry ",
+            "options": [
+                "Thousand Sunny",
+                "Going Merry ",
                 "Red Force",
                 "The Flying Dutchman"
             ]
         },
 
         {
-            "Question": "What is painted on Moneky D Luffy's Jolly Roger ?", 
-            "Answer": "A Skull and Bones wearing a straw hat", 
-            "Options": [
+            "question": "What is painted on Moneky D Luffy's Jolly Roger ?",
+            "answer": "A Skull and Bones wearing a straw hat",
+            "options": [
                 "A Skull and Bones surronded by sweets", 
                 "A Skull and Bones with three scars",
-                "A Skull and Bones wearing a top hat"
+                "A Skull and Bones wearing a top hat",
+                "A Skull and Bones wearing a straw hat"
             ]
         } 
     ],
 
     "PlayStation": [
             {
-                "Question": "What is the name of the studio that produced The Last Of Us?", 
-                "Answer": "Naughty Dog", 
-                "Options": [
+                "question": "What is the name of the studio that produced The Last Of Us?",
+                "answer": "Naughty Dog",
+                "options": [
+                    "Naughty Dog",
                     "343 Studios",
                     "Blizzard",
                     "Sucker Punch"
@@ -117,19 +128,21 @@
             }, 
 
             {
-                "Question": "What Marvel franchise is Insomniac famouse for developing?", 
-                "Answer": "Spiderman", 
-                "Options":[ 
+                "question": "What Marvel franchise is Insomniac famouse for developing?",
+                "answer": "Spiderman",
+                "options":[
                     "Wolverine",
                     "The Hulk",
-                    "Batman"
+                    "Batman",
+                    "Spiderman"
                 ] 
             },
             
            {
-                "Question": "What colour is the PlayStation 5?", 
-                "Answer": "White and Black", 
-                "Options": [
+                "question": "What colour is the PlayStation 5?",
+                "answer": "White and Black",
+                "options": [
+                    "White and Black",
                     "Black and Blue",
                     "Pink and Red",
                     "Blue and White"
@@ -137,21 +150,23 @@
             },
 
             {
-                "Question": "What is the name of the main character in God of war?", 
-                "Answer": "Kratos", 
-                "Options": [
+                "question": "What is the name of the main character in God of war?",
+                "answer": "Kratos",
+                "options": [
                     "Zeus", 
                     "Aries", 
-                    "Jeff"
+                    "Jeff",
+                    "Kratos"
                 ] 
             },
 
             {
-                "Question": "How many main line Uncharted games have been released ?", 
-                "Answer": "5", 
-                "Options":[ 
+                "question": "How many main line Uncharted games have been released ?",
+                "answer": "5",
+                "options":[
                     "4",
                     "2",
+                    "5",
                     "7"
                 ]
             } 
@@ -159,19 +174,21 @@
 
     "Sports" :[
         {
-            "Question": "Which country has won the most soccer World Cups?",         
-            "Answer": "Brazil", 
-            "Options": [
+            "question": "Which country has won the most soccer World Cups?",
+            "answer": "Brazil",
+            "options": [
                 "Germany",
+                "Brazil",
                 "France",
                 "South Africa"
             ]
         }, 
 
         {
-            "Question": "In which year did China host the Olympics?", 
-            "Answer": "2008", 
-            "Options": [
+            "question": "In which year did China host the Olympics?",
+            "answer": "2008",
+            "options": [
+                "2008",
                 "2004",
                 "2012",
                 "2000"
@@ -179,29 +196,32 @@
         }, 
 
         {
-            "Question": "How many rugby World Cups has South Africa won?", 
-            "Answer": "3",
-            "Options": [
+            "question": "How many rugby World Cups has South Africa won?",
+            "answer": "3",
+            "options": [
                 "1",
                 "2",
-                "4"
+                "4",
+                "3"
             ]
         }, 
 
         {
-            "Question":"What is the 100m sprint record?", 
-            "Answer": "9.58s", 
-            "Options": [
+            "question":"What is the 100m sprint record?",
+            "answer": "9.58s",
+            "options": [
                 "9.78s",
                 "9.85s", 
-                "9.52s"
+                "9.52s",
+                "9.58s"
             ]
         },    
 
         {
-            "Question":"Who has the most F1 Driver's Championships?",   
-            "Answer": "Lewis Hamilton", 
-            "Options": [
+            "question":"Who has the most F1 Driver's Championships?",
+            "answer": "Lewis Hamilton",
+            "options": [
+                "Lewis Hamilton",
                 "Fernando Alonso",
                 "Sebastian Vettel",
                 "NikiLaude"
@@ -211,29 +231,32 @@
 
     "Geography" :[
         {
-            "Question":"What is the largest continent in size?", 
-            "Answer": "Asia", 
-            "Options": [
+            "question":"What is the largest continent in size?",
+            "answer": "Asia",
+            "options": [
                 "Africa",
                 "Europe",
-                "North America"
+                "North America",
+                "Asia"
             ]
         }, 
 
         {
-            "Question":"Which is the smallest country in size?", 
-            "Answer": "Vatican City", 
-            "Options": [
+            "question":"Which is the smallest country in size?",
+            "answer": "Vatican City",
+            "options": [
                 "Naura",
-                "Tonga", 
+                "Tonga",
+                "Vatican City",
                 "Samoa"
             ]
         }, 
 
         {
-            "Question":"In which country is the tallest mountain?", 
-            "Answer": "Nepal", 
-            "Options": [
+            "question":"In which country is the tallest mountain?",
+            "answer": "Nepal",
+            "options": [
+                "Nepal",
                 "Switzerland",
                 "Greenland",
                 "Slovakia"
@@ -241,41 +264,45 @@
         }, 
 
         {
-            "Question":"Which is the largest ocean?", 
-            "Answer": "Pacific Ocean",
-            "Options": [
+            "question":"Which is the largest ocean?",
+            "answer": "Pacific Ocean",
+            "options": [
                 "Atlantic Ocean",
                 "Indian Ocean",
-                "Arctic Ocean"
+                "Arctic Ocean",
+                "Pacific Ocean"
             ] 
         },
 
         {
-            "Question":"What is the size of the Sahara desert?", 
-            "Answer": "9 200 000 km2", 
-            "Options": [
+            "question":"What is the size of the Sahara desert?",
+            "answer": "9 200 000 km2",
+            "options": [
                 "10 000 000 km2", 
                 "9 500 000 km2 ", 
-                "9 000 000 km2"
+                "9 000 000 km2",
+                "9 200 000 km2"
             ]
         }, 
 
         {
-            "Question":"What is the capital of Italy?", 
-            "Answer": "Rome", 
-            "Options": [
+            "question":"What is the capital of Italy?",
+            "answer": "Rome",
+            "options": [
                 "Florence", 
                 "Venice", 
-                "Naples"
+                "Naples",
+                "Rome"
             ]
         } 
     ],
 
     "Science" : [
         {
-            "Question": "What does a 'light year' measure?", 
-            "Answer": "Distance", 
-            "Options": [
+            "question": "What does a 'light year' measure?",
+            "answer": "Distance",
+            "options": [
+                "Distance",
                 "Sound", 
                 "Time",
                 "Speed"
@@ -283,39 +310,43 @@
         },
 
         {
-            "Question": "Photosynthesis is a process created by?",
-            "Answer": "Plants", 
-            "Options": [
+            "question": "Photosynthesis is a process created by?",
+            "answer": "Plants",
+            "options": [
                 "Animals", 
                 "Food", 
-                "Cameras"
+                "Cameras",
+                "Plants"
             ]
         }, 
 
         {
-            "Question": "How many bones are in the human body?",
-            "Answer": "206", 
-            "Options": [
+            "question": "How many bones are in the human body?",
+            "answer": "206",
+            "options": [
                 "106", 
                 "156", 
-                "256"
+                "256",
+                "206"
             ]
         }, 
 
         {
-            "Question": "How much of the Earth's surface is covered in water?", 
-            "Answer": "70%",
-            "Options": [
+            "question": "How much of the Earth's surface is covered in water?",
+            "answer": "70%",
+            "options": [
                 "20%",
+                "70%",
                 "40%",
                 "50%"
             ]
         }, 
 
         {
-            "Question": "In which food will you find the most Vitamin C?", 
-            "Answer": "Vitamin C", 
-            "Options": [
+            "question": "In which food will you find the most Vitamin C?",
+            "answer": "Vitamin C",
+            "options": [
+                "Vitamin C",
                 "Meat",
                 "Fish",
                 "Cereal"
@@ -324,9 +355,9 @@
     ], 
     "Math":[
         {
-            "Question": "121 Divided by 11 is",
-            "Answer": "11",
-            "Options": [
+            "question": "121 Divided by 11 is",
+            "answer": "11",
+            "options": [
                 "11",
                 "10",
                 "19",
@@ -335,9 +366,9 @@
         },
 
         {
-            "Question": "Solve 3 + 6 × ( 5 + 4) ÷ 3 - 7",
-            "Answer": "14",
-            "Options": [
+            "question": "Solve 3 + 6 × ( 5 + 4) ÷ 3 - 7",
+            "answer": "14",
+            "options": [
                 "11",
                 "16",
                 "14",
@@ -346,9 +377,9 @@
         },
 
         {
-            "Question": "Solve 23 + 3 ÷ 3",
-            "Answer": "24",
-            "Options": [
+            "question": "Solve 23 + 3 ÷ 3",
+            "answer": "24",
+            "options": [
                 "24",
                 "25",
                 "26",
@@ -357,9 +388,9 @@
         },
 
         {
-            "Question": "Add the Decimals 5.23 + 8.79",
-            "Answer": "14.02",
-            "Options": [
+            "question": "Add the Decimals 5.23 + 8.79",
+            "answer": "14.02",
+            "options": [
                 "14.19",
                 "14.11",
                 "14.02",
@@ -368,9 +399,9 @@
         },
         
         {
-            "Question": "The Product of 131 x 0 x 300 x 4",
-            "Answer": "0",
-            "Options": [
+            "question": "The Product of 131 x 0 x 300 x 4",
+            "answer": "0",
+            "options": [
                 "11",
                 "0",
                 "46",

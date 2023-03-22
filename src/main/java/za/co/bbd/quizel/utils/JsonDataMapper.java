@@ -51,7 +51,7 @@ public class JsonDataMapper {
 
         Type conversionType = new TypeToken<List<QuizQuestion>>(){}.getType();
         for(Map.Entry<String, JSONArray> entry : entries) {
-            String jsonString = entry.getValue().toJSONString();
+            String jsonString = entry.getValue().toString();
             List<QuizQuestion> questions = gson.fromJson(jsonString, conversionType);
 
             log.debug("Adding \"{}\" genre with {} questions", entry.getKey(), questions.size());

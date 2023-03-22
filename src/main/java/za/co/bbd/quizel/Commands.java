@@ -7,7 +7,7 @@ public class Commands {
         String userInput = input.toLowerCase().trim();
         if (userInput.equals("quit") || userInput.equals("q")) {
             CloseProgram();
-        } else if (userInput.equals("a") || userInput.equals("b") || userInput.equals("c") || userInput.equals("d")) {
+        } else if (userInput.equals("A") || userInput.equals("B") || userInput.equals("C") || userInput.equals("D")) {
             ProcessUserAnswer(userInput);
         } else {
             ListCommands();
