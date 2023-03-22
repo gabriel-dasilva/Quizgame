@@ -6,7 +6,8 @@
             "Options":[ 
                 "Slytherin", 
                 "Hufflepuff", 
-                "Ravenclaw"
+                "Ravenclaw",
+                "Gryffindor"
             ]
         },
 
@@ -14,6 +15,7 @@
             "Question": "How are students sorted into their houses?", 
             "Answer": "Sorting Hat", 
             "Options": [
+                "Sorting Hat",
                 "Sorting Test", 
                 "Sorting Ceremony", 
                 "Sorting Wand"
@@ -22,11 +24,12 @@
 
         {
             "Question": "What house is Draco Malfoy sorted into?",
-            "Answer": "Slytherin", 
+            "Answer": "Slytherin",
             "Options": [
                 "RavenClaw", 
                 "Hufflepuff",
-                "Gryffindor"
+                "Gryffindor",
+                "Slytherin"
             ]
         }, 
 
@@ -35,7 +38,8 @@
             "Answer": "Pheonix Feather", 
             "Options": [
                 "Unicorn Hair",
-                "Dragon Heart String", 
+                "Dragon Heart String",
+                "Pheonix Feather",
                 "Troll Hair"
             ]
         }, 
@@ -45,19 +49,21 @@
             "Answer": "A Golden Egg", 
             "Options": [
                 "A Broom",
+                "A Golden Egg",
                 "A Golden Snitch",
                 "A Map"
             ]
         }
     ],
 
-    "One Piece Quiz": [
+    "One Piece": [
         {
-            "Questions":" What is the name of Monkey D Luffys Devil Fruit ?", 
+            "Question": "What is the name of Monkey D Luffys Devil Fruit ?",
             "Answer": "Gomu Gomu No Mi", 
             "Options":[
                 " Magu Magu No Mi",
                 "Goro Goro No Mi",
+                "Gomu Gomu No Mi",
                 "Ope Ope No Mi"
                 ]
         },
@@ -65,21 +71,23 @@
 
         {
            " Question": "How many swords does Roronoa Zoro use when fighting ?", 
-            "Answer": 3, 
+            "Answer": "3",
             "Options": [
-                1, 
-                9,
-                2
+                "3",
+                "1",
+                "9",
+                "2"
             ]
         },
 
         {
             "Question": "What kind of animal is Tony Chopper ?", 
-            "Answer":" Reindeer", 
+            "Answer":"Reindeer",
 
             "Options": [
                 "Otter",
                 "Lion",
+                "Reindeer",
                 "Rabbit"
                 ]
         }, 
@@ -88,7 +96,8 @@
             "Question": "What is the name of Monkey D Luffy's first ship?", 
             "Answer": "Going Merry ",
             "Options": [
-                "Thousand Sunny", 
+                "Thousand Sunny",
+                "Going Merry ",
                 "Red Force",
                 "The Flying Dutchman"
             ]
@@ -100,7 +109,8 @@
             "Options": [
                 "A Skull and Bones surronded by sweets", 
                 "A Skull and Bones with three scars",
-                "A Skull and Bones wearing a top hat"
+                "A Skull and Bones wearing a top hat",
+                "A Skull and Bones wearing a straw hat"
             ]
         } 
     ],
@@ -110,6 +120,7 @@
                 "Question": "What is the name of the studio that produced The Last Of Us?", 
                 "Answer": "Naughty Dog", 
                 "Options": [
+                    "Naughty Dog",
                     "343 Studios",
                     "Blizzard",
                     "Sucker Punch"
@@ -122,7 +133,8 @@
                 "Options":[ 
                     "Wolverine",
                     "The Hulk",
-                    "Batman"
+                    "Batman",
+                    "Spiderman"
                 ] 
             },
             
@@ -130,6 +142,7 @@
                 "Question": "What colour is the PlayStation 5?", 
                 "Answer": "White and Black", 
                 "Options": [
+                    "White and Black",
                     "Black and Blue",
                     "Pink and Red",
                     "Blue and White"
@@ -142,7 +155,8 @@
                 "Options": [
                     "Zeus", 
                     "Aries", 
-                    "Jeff"
+                    "Jeff",
+                    "Kratos"
                 ] 
             },
 
@@ -152,6 +166,7 @@
                 "Options":[ 
                     "4",
                     "2",
+                    "5",
                     "7"
                 ]
             } 
@@ -163,6 +178,7 @@
             "Answer": "Brazil", 
             "Options": [
                 "Germany",
+                "Brazil",
                 "France",
                 "South Africa"
             ]
@@ -172,6 +188,7 @@
             "Question": "In which year did China host the Olympics?", 
             "Answer": "2008", 
             "Options": [
+                "2008",
                 "2004",
                 "2012",
                 "2000"
@@ -184,7 +201,8 @@
             "Options": [
                 "1",
                 "2",
-                "4"
+                "4",
+                "3"
             ]
         }, 
 
@@ -194,7 +212,8 @@
             "Options": [
                 "9.78s",
                 "9.85s", 
-                "9.52s"
+                "9.52s",
+                "9.58s"
             ]
         },    
 
@@ -202,6 +221,7 @@
             "Question":"Who has the most F1 Driver's Championships?",   
             "Answer": "Lewis Hamilton", 
             "Options": [
+                "Lewis Hamilton",
                 "Fernando Alonso",
                 "Sebastian Vettel",
                 "NikiLaude"
@@ -216,7 +236,8 @@
             "Options": [
                 "Africa",
                 "Europe",
-                "North America"
+                "North America",
+                "Asia"
             ]
         }, 
 
@@ -225,7 +246,8 @@
             "Answer": "Vatican City", 
             "Options": [
                 "Naura",
-                "Tonga", 
+                "Tonga",
+                "Vatican City",
                 "Samoa"
             ]
         }, 
@@ -234,6 +256,7 @@
             "Question":"In which country is the tallest mountain?", 
             "Answer": "Nepal", 
             "Options": [
+                "Nepal",
                 "Switzerland",
                 "Greenland",
                 "Slovakia"
@@ -246,7 +269,8 @@
             "Options": [
                 "Atlantic Ocean",
                 "Indian Ocean",
-                "Arctic Ocean"
+                "Arctic Ocean",
+                "Pacific Ocean"
             ] 
         },
 
@@ -256,7 +280,8 @@
             "Options": [
                 "10 000 000 km2", 
                 "9 500 000 km2 ", 
-                "9 000 000 km2"
+                "9 000 000 km2",
+                "9 200 000 km2"
             ]
         }, 
 
@@ -266,7 +291,8 @@
             "Options": [
                 "Florence", 
                 "Venice", 
-                "Naples"
+                "Naples",
+                "Rome"
             ]
         } 
     ],
@@ -276,6 +302,7 @@
             "Question": "What does a 'light year' measure?", 
             "Answer": "Distance", 
             "Options": [
+                "Distance",
                 "Sound", 
                 "Time",
                 "Speed"
@@ -288,7 +315,8 @@
             "Options": [
                 "Animals", 
                 "Food", 
-                "Cameras"
+                "Cameras",
+                "Plants"
             ]
         }, 
 
@@ -298,7 +326,8 @@
             "Options": [
                 "106", 
                 "156", 
-                "256"
+                "256",
+                "206"
             ]
         }, 
 
@@ -307,6 +336,7 @@
             "Answer": "70%",
             "Options": [
                 "20%",
+                "70%",
                 "40%",
                 "50%"
             ]
@@ -316,6 +346,7 @@
             "Question": "In which food will you find the most Vitamin C?", 
             "Answer": "Vitamin C", 
             "Options": [
+                "Vitamin C",
                 "Meat",
                 "Fish",
                 "Cereal"
