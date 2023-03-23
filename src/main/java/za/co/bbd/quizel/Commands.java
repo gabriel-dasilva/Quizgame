@@ -19,28 +19,28 @@ public class Commands {
     public Commands(List<Genre> genre) {
         this.categories = genre;
     }
-    public void ProcessInput(String input, QuizQuestion... questions){
+    public void processInput(String input, QuizQuestion... questions){
         String userInput = input.toLowerCase().trim();
         if (userInput.equals("quit") || userInput.equals("q")) {
-            CloseProgram();
+            closeProgram();
         } else if (userInput.equals("a") || userInput.equals("b") || userInput.equals("c") || userInput.equals("d")) {
-            ProcessUserAnswer(userInput, questions[0]);
+            processUserAnswer(userInput, questions[0]);
         }else if(userInput.equals("menu") || userInput.equals("m")){
-            Menu();
+            menu();
         }else if(Integer.parseInt(input) <= this.categories.size() && Integer.parseInt(input) >= 1){
             questions(input);
         }
         else {
-            ListCommands();
+            listCommands();
         }
 
     }
 
-    private static void ListCommands(){
+    private static void listCommands(){
         System.out.println( "[M]enu: Go to menu\n[Q]uit: Quit game\nPick a Category using the corresponding index ie: 1 for 1.Sport\nInput answer A,B,C or D" );
     }
 
-    private void ProcessUserAnswer(String userAnswer, QuizQuestion q){
+    private void processUserAnswer(String userAnswer, QuizQuestion q){
         char ans;
         ans = userAnswer.charAt(0);
 
@@ -71,7 +71,7 @@ public class Commands {
         }
     }
 
-    private void CloseProgram(){
+    private void closeProgram(){
 //        String closeMessage = "Thank You For Playing Quizel";
 //        if(this.isMiddleOfGame && (this.countCorrect > 0 || this.countWrong > 0)){
 //            int numberOfQuestions = this.countCorrect + this.countWrong;
@@ -82,7 +82,7 @@ public class Commands {
         System.exit(0);
     }
 
-    private void Menu(){
+    private void menu(){
         System.out.println("------------------------------------------------------");
         System.out.println( "                  Choose a category!" );
         System.out.println("------------------------------------------------------");
@@ -117,7 +117,7 @@ public class Commands {
             System.out.println("C : " +q.options().get(2));
             System.out.println("D : " +q.options().get(3));
 
-            ProcessInput(sc.nextLine(),q); //Handle user input
+            processInput(sc.nextLine(),q); //Handle user input
 
             System.out.println("============================================================================================");
         }
