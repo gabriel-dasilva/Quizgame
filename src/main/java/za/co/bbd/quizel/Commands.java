@@ -14,6 +14,8 @@ public class Commands {
     int countWrong = 0;
     int count = 1;
 
+    boolean isMiddleOfGame = false;
+
     public Commands(List<Genre> genre) {
         this.categories = genre;
     }
@@ -69,7 +71,14 @@ public class Commands {
         }
     }
 
-    private static void CloseProgram(){
+    private void CloseProgram(){
+//        String closeMessage = "Thank You For Playing Quizel";
+//        if(this.isMiddleOfGame && (this.countCorrect > 0 || this.countWrong > 0)){
+//            int numberOfQuestions = this.countCorrect + this.countWrong;
+//            String midGameScore = "Your score was " + this.countCorrect + "/" + numberOfQuestions;
+//            printSingleLineBox(midGameScore);
+//        }
+//        printSingleLineBox(closeMessage);
         System.exit(0);
     }
 
@@ -77,7 +86,7 @@ public class Commands {
         System.out.println("------------------------------------------------------");
         System.out.println( "                  Choose a category!" );
         System.out.println("------------------------------------------------------");
-
+        this.resetCounts();
         this.count = 1;
 
         for (Genre genreOption : this.categories){
@@ -88,9 +97,9 @@ public class Commands {
     }
 
     private void questions(String userGenre){
-        this.countTotal = 0;
-        this.countCorrect = 0;
-        this.countWrong = 0;
+        this.isMiddleOfGame = true;
+        this.resetCounts();
+
         Scanner sc = new Scanner(System.in);
         List<QuizQuestion> questions;
 
@@ -114,6 +123,14 @@ public class Commands {
         }
         Results result = new Results(this.countTotal,this.countCorrect, this.countWrong);
         result.showResult();
+        this.isMiddleOfGame = false;
+        this.resetCounts();
+    }
+
+    private void resetCounts(){
+        this.countTotal = 0;
+        this.countCorrect = 0;
+        this.countWrong = 0;
     }
 }
 

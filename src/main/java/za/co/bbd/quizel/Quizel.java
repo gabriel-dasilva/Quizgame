@@ -34,6 +34,7 @@ public class Quizel
         System.out.println("============================================================================================");
         System.out.println( "                  Welcome to Quizel!" );
         System.out.println("------------------------------------------------------");
+        userInputs.ProcessInput("m");
 
         while(true){
             System.out.println( "[M]enu: Go to menu                  [Q]uit: Quit game" );
