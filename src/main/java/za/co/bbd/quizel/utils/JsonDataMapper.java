@@ -2,6 +2,7 @@ package za.co.bbd.quizel.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.io.IOUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,10 +12,10 @@ import org.slf4j.LoggerFactory;
 import za.co.bbd.quizel.models.Genre;
 import za.co.bbd.quizel.models.QuizQuestion;
 
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,15 +28,14 @@ public class JsonDataMapper {
     }
 
     public static List<Genre> getAllData() {
-        URL filePath = JsonDataMapper.class.getClassLoader().getResource("data.json");
-
         JSONParser parser = new JSONParser();
         JSONObject gameData;
         try {
-            assert filePath != null;
-            try (FileReader reader = new FileReader(filePath.getPath())
+            try (InputStream stream = JsonDataMapper.class.getClassLoader()
+                    .getResourceAsStream("data.json")
             ) {
-                gameData = (JSONObject) parser.parse(reader);
+                assert stream != null;
+                gameData = (JSONObject) parser.parse(IOUtils.toString(stream, StandardCharsets.UTF_8));
             }
         } catch (ParseException exception) {
             log.error("Failed to parse Json", exception);
