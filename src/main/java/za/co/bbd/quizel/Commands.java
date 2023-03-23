@@ -21,11 +21,11 @@ public class Commands {
         String userInput = input.toLowerCase().trim();
         if (userInput.equals("quit") || userInput.equals("q")) {
             CloseProgram();
-        } else if (userInput.equals("A") || userInput.equals("B") || userInput.equals("C") || userInput.equals("D")) {
+        } else if (userInput.equals("a") || userInput.equals("b") || userInput.equals("c") || userInput.equals("d")) {
             ProcessUserAnswer(userInput, questions[0]);
         }else if(userInput.equals("menu") || userInput.equals("m")){
             Menu();
-        }else if(Integer.parseInt(input) < this.categories.size() && Integer.parseInt(input) > 1){
+        }else if(Integer.parseInt(input) <= this.categories.size() && Integer.parseInt(input) >= 1){
             questions(input);
         }
         else {
@@ -35,7 +35,7 @@ public class Commands {
     }
 
     private static void ListCommands(){
-        System.out.println("Place Holder");
+        System.out.println( "[M]enu: Go to menu\n[Q]uit: Quit game\nPick a Category using the corresponding index ie: 1 for 1.Sport\nInput answer A,B,C or D" );
     }
 
     private void ProcessUserAnswer(String userAnswer, QuizQuestion q){
@@ -45,10 +45,10 @@ public class Commands {
         String answer = "";
 
         switch (ans) {
-            case 'A' -> answer = q.options().get(0);
-            case 'B' -> answer = q.options().get(1);
-            case 'C' -> answer = q.options().get(2);
-            case 'D' -> answer = q.options().get(3);
+            case 'a' -> answer = q.options().get(0);
+            case 'b' -> answer = q.options().get(1);
+            case 'c' -> answer = q.options().get(2);
+            case 'd' -> answer = q.options().get(3);
             default -> {
             }
         }
@@ -85,27 +85,21 @@ public class Commands {
             this.count++;
         }
         System.out.println(this.count + ". " + "Random\n");
-        System.out.println( "[M]enu: Go to menu                  [Q]uit: Quit game" ); // Handle user input
     }
 
     private void questions(String userGenre){
         this.countTotal = 0;
         this.countCorrect = 0;
         this.countWrong = 0;
-
-//        Random rand = new Random();
         Scanner sc = new Scanner(System.in);
         List<QuizQuestion> questions;
-//        questions = this.categories.get(rand.nextInt(this.categories.size()-1)).GenreQuestions();
-//        System.out.println("============================================================================================");
-//        System.out.println( "Begin " +  this.categories.get(rand.nextInt(this.categories.size()-1)).GenreDescription() + " Quiz!");
-//        System.out.println("============================================================================================");
+
         questions = this.categories.get(Integer.parseInt(userGenre)-1).GenreQuestions();
         System.out.println("============================================================================================");
         System.out.println( "Begin " +  this.categories.get(Integer.parseInt(userGenre)-1).GenreDescription() + " Quiz!");
         System.out.println("============================================================================================");
 
-        countTotal = questions.size();
+        this.countTotal = questions.size();
 
         for(QuizQuestion q: questions){
             System.out.println(q.question());
@@ -118,7 +112,7 @@ public class Commands {
 
             System.out.println("============================================================================================");
         }
-        Results result = new Results(countTotal,countCorrect, countWrong);
+        Results result = new Results(this.countTotal,this.countCorrect, this.countWrong);
         result.showResult();
     }
 }
