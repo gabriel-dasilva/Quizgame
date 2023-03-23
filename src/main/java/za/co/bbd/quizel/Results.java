@@ -1,22 +1,36 @@
 package za.co.bbd.quizel;
 
-public class Results implements IResults {
-    int totalQuestions;
-    int correctAnswers;
-    int wrongAnswers;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import za.co.bbd.quizel.services.ConsoleHandler;
 
-    public Results(int totalQuestions, int correctAnswers, int wrongAnswers) {
-        this.totalQuestions = totalQuestions;
-        this.correctAnswers = correctAnswers;
-        this.wrongAnswers = wrongAnswers;
-    }
+@Getter
+@AllArgsConstructor
+public class Results {
+    private int correctAnswers;
+    private int wrongAnswers;
 
-    @Override
     public void showResult() {
-        System.out.println("Your results!");
-        System.out.println("Total Questions " + totalQuestions);
-        System.out.println("Number of correct answers " + correctAnswers);
-        System.out.println("Number of wrong answers " + wrongAnswers);
+        ConsoleHandler.print("Your results!");
+        ConsoleHandler.print("Total Questions " + getTotalQuestions());
+        ConsoleHandler.print("Number of correct answers " + getCorrectAnswers());
+        ConsoleHandler.print("Number of wrong answers " + getWrongAnswers());
     }
 
+    public int getTotalQuestions() {
+        return getCorrectAnswers() + getWrongAnswers();
+    }
+
+    public void resetCounts() {
+        correctAnswers = 0;
+        wrongAnswers = 0;
+    }
+
+    public void incrementWrongAnswers() {
+        wrongAnswers++;
+    }
+
+    public void incrementCorrectAnswers() {
+        correctAnswers++;
+    }
 }

@@ -2,6 +2,7 @@ package za.co.bbd.quizel.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import za.co.bbd.quizel.models.Genre;
 
 import java.util.List;
 import java.util.Map;
@@ -66,8 +67,9 @@ public class ConsoleHandler {
     }
 
     public static void printOptions(List<String> options) {
+        int index = 1;
         for(String option : options) {
-            print(option);
+            print(index + ". " + option);
         }
     }
 
@@ -98,13 +100,10 @@ public class ConsoleHandler {
 
     public static String getUserAnswer(String question, Map<String, String> options) {
         while(true) {
-            printQuestion(question, options);
-            printControls();
-
             try {
                 return getInputText("Answer");
             } catch (IllegalArgumentException exception) {
-                log.debug("10 attempts reached");
+                print("10 attempts reached. Please select valid answer");
             }
         }
     }
@@ -115,7 +114,7 @@ public class ConsoleHandler {
         }
     }
 
-    private static void printQuestion(String question, Map<String, String> options) {
+    public static void printQuestion(String question, Map<String, String> options) {
         print(question);
         options.forEach((key, value) -> print(key + ". " + value));
         print("");
@@ -129,8 +128,14 @@ public class ConsoleHandler {
         }
     }
 
-    public static void printMenu() {
-        // TODO: print menu
-        printControls();
+    public static void printGenreDescriptions(List<Genre> genres) {
+        int count = 1;
+
+        for (Genre genre : genres){
+            print(count + ". " + genre.GenreDescription());
+            count++;
+        }
+
+        ConsoleHandler.print(count + ". " + "Random\n");
     }
 }

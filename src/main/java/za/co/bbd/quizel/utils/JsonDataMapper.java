@@ -54,7 +54,6 @@ public class JsonDataMapper {
             String jsonString = entry.getValue().toString();
             List<QuizQuestion> questions = gson.fromJson(jsonString, conversionType);
 
-            log.debug("Adding \"{}\" genre with {} questions", entry.getKey(), questions.size());
             genres.add(new Genre(entry.getKey(), questions));
         }
 
