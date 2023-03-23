@@ -2,9 +2,7 @@ package za.co.bbd.quizel.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import za.co.bbd.quizel.models.QuizQuestion;
 
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;

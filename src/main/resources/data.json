@@ -70,7 +70,7 @@
 
 
         {
-           " Question": "How many swords does Roronoa Zoro use when fighting ?", 
+           "question": "How many swords does Roronoa Zoro use when fighting ?",
             "answer": "3",
             "options": [
                 "3",
