@@ -34,11 +34,11 @@ public class Quizel
         System.out.println("============================================================================================");
         System.out.println( "                  Welcome to Quizel!" );
         System.out.println("------------------------------------------------------");
-        userInputs.ProcessInput("m");
+        userInputs.processInput("m");
 
         while(true){
             System.out.println( "[M]enu: Go to menu                  [Q]uit: Quit game" );
-            userInputs.ProcessInput(sc.nextLine()); //handle user input
+            userInputs.processInput(sc.nextLine()); //handle user input
         }
     }
 }
