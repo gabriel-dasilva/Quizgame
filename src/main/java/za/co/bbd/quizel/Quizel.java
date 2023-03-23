@@ -4,11 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import za.co.bbd.quizel.models.Genre;
 import za.co.bbd.quizel.models.QuizQuestion;
+import za.co.bbd.quizel.services.ConsoleHandler;
 import za.co.bbd.quizel.utils.JsonDataMapper;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class Quizel
 {
@@ -24,9 +24,7 @@ public class Quizel
 
     void begin( ) {
         // TODO: Start game loop
-        Commands userInputs = new Commands();
-        System.out.println( "Welcome to quizel!" );
-        Scanner sc = new Scanner(System.in);
+        ConsoleHandler.printIntroduction();
 
         int countTotal = 0;
         int countCorrect = 0;
@@ -35,84 +33,76 @@ public class Quizel
         // TODO: Handle user input
         List<Genre> data = JsonDataMapper.getAllData();
 
-        System.out.println("============================================================================================");
-        System.out.println( "                  Welcome to Quizel!" );
-        System.out.println("------------------------------------------------------");
-        System.out.println( "                  Choose a category!" );
-        System.out.println("------------------------------------------------------");
+        ConsoleHandler.printSingleLineBox("Choose a category");
 
-        int count = 1;
-        for (Genre genreOption : data){
-            System.out.println(count + ". " + genreOption.GenreDescription());
-            count++;
-        }
-        System.out.println(count + ". " + "Random");
+        ConsoleHandler.printOptions(data.stream().map(Genre::GenreDescription).toList());
+        ConsoleHandler.print(data.size() + ". " + "Random\n");
 
-        System.out.println();
-        System.out.println( "[M]enu: Go to menu                  [Q]uit: Quit game" ); // Handle user input
-        boolean temp = true;
+        ConsoleHandler.printControls();
         Random rand = new Random();
 
-        while(temp){
-//            userInputs.ProcessInput(sc.nextLine());
-            String userGenre = sc.nextLine(); //handle user input
-            List<QuizQuestion> questions;
-            if (count == Integer.parseInt(userGenre)){
-                questions = data.get(rand.nextInt(data.size()-1)).GenreQuestions();
-                System.out.println("============================================================================================");
-                System.out.println( "Begin " +  data.get(rand.nextInt(data.size()-1)).GenreDescription() + " Quiz!");
-                System.out.println("============================================================================================");
-            } else {
-                questions = data.get(Integer.parseInt(userGenre)-1).GenreQuestions();
-                System.out.println("============================================================================================");
-                System.out.println( "Begin " +  data.get(Integer.parseInt(userGenre)-1).GenreDescription() + " Quiz!");
-                System.out.println("============================================================================================");
-            }
+        boolean running = true;
 
-            countTotal = questions.size();
+        while(running) {
+            String userInput = ConsoleHandler.getInputText("Category").toLowerCase();
 
-            for(QuizQuestion q: questions){
-                System.out.println(q.question());
-                System.out.println("A : " +q.options().get(0));
-                System.out.println("B : " +q.options().get(1));
-                System.out.println("C : " +q.options().get(2));
-                System.out.println("D : " +q.options().get(3));
+            int selectedCategory;
+            try {
+                selectedCategory = Integer.parseInt(userInput);
+            } catch(NumberFormatException exception) {
+                log.debug("Invalid integer for category selection", exception);
 
-                // userInputs.ProcessInput(sc.nextLine()); //Handle user input
-                String userAnswer = sc.nextLine();
-
-                char ans;
-                ans = userAnswer.charAt(0);
-
-                String answer = "";
-
-                switch (ans) {
-                    case 'A' -> answer = q.options().get(0);
-                    case 'B' -> answer = q.options().get(1);
-                    case 'C' -> answer = q.options().get(2);
-                    case 'D' -> answer = q.options().get(3);
+                switch (userInput) {
+                    case "m", "menu" -> ConsoleHandler.printMenu();
+                    case "q", "quit" -> {
+                        ConsoleHandler.printDoubleLineBox("Thank you for playing");
+                        running = false;
+                    }
                     default -> {
+                        log.error("Invalid category", exception);
+                        ConsoleHandler.print("Invalid selection");
                     }
                 }
+                continue;
+            }
 
-                if(answer.equals(q.answer()))
-                {
-                    System.out.println("------------------------------------------------------");
-                    System.out.println("                  Correct Answer                      ");
-                    System.out.println("------------------------------------------------------");
+            Genre currentGenre;
+            if(data.size() > Integer.parseInt(userInput)){
+                currentGenre = data.get(selectedCategory-1);
+            } else if(data.size() == selectedCategory) {
+                currentGenre = data.get(rand.nextInt(data.size()-1));
+            } else {
+                log.debug("Failed to process category option");
+                ConsoleHandler.print("Invalid category");
+                continue;
+            }
+
+            // TODO: Try
+            List<QuizQuestion> questions = currentGenre.GenreQuestions();
+            ConsoleHandler.printDoubleLineBox("Begin " + currentGenre.GenreDescription() + " quiz!");
+            countTotal = questions.size();
+
+            for(QuizQuestion question: questions){
+                Map<String, String> optionsMap = new HashMap<>();
+                AtomicReference<Character> optionLetter = new AtomicReference<>('A');
+
+                question.options().stream().unordered().forEach(option -> {
+                    optionsMap.put(String.valueOf(optionLetter.get()), option);
+                    optionLetter.updateAndGet(v -> (char) (v + 1));
+                });
+
+                String userAnswer = ConsoleHandler
+                        .getUserAnswer(question.question(), optionsMap)
+                        .trim().toUpperCase();
+
+                if(question.answer().equals(optionsMap.get(userAnswer))) {
+                    ConsoleHandler.printSingleLineBox("Correct Answer");
                     countCorrect++;
-                }
-                else
-                {
-                    System.out.println("------------------------------------------------------");
-                    System.out.println("                  Wrong Answer                      ");
-                    System.out.println("------------------------------------------------------");
+                } else {
+                    ConsoleHandler.printSingleLineBox("Wrong Answer");
                     countWrong++;
                 }
-
-                System.out.println("============================================================================================");
             }
-            temp= !temp;
         }
 
         Results result = new Results(countTotal,countCorrect, countWrong);
