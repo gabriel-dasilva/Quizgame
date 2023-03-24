@@ -11,7 +11,10 @@ A basic CLI quiz game where users select a category and they are prompted to ans
 ![alt text](./images/correct-answer.png)
 ### 5. If answer is wrong display **Wrong Answer** message and correct option
 ![alt text](./images/wrong-answer.png)
-## 6. When all questions for the category are answered, display results
+### 6. When all questions for the category are answered, display results
 ![alt text](./images/game-over.png)
-## enter [Q] to quit current game
-## enter [M] to view categories
+### When all questions for the category are answered, display results
+![alt text](./images/game-over.png)
+### Enter [M] to view categories && Enter [Q] to quit current game 
+![alt text](./images/commands.png)
+
