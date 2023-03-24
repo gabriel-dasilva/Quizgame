@@ -19,7 +19,7 @@ public class Commands {
     boolean isMiddleOfGame = false;
     Genre currentGenre;
 
-    private void ProcessUserAnswer(String userAnswer){
+    private void processUserAnswer(String userAnswer){
         if(userAnswer.equalsIgnoreCase(currentCorrectAnswer)) {
             ConsoleHandler.printSingleLineBox("Correct Answer");
             result.incrementCorrectAnswers();
@@ -29,7 +29,7 @@ public class Commands {
         }
     }
 
-    public void CloseProgram(){
+    public void closeProgram(){
         ConsoleHandler.closeInputStream();
         System.exit(0);
     }
@@ -54,7 +54,7 @@ public class Commands {
             ConsoleHandler.printSingleLineBox("Begin " + currentGenre.GenreDescription() + " quiz!");
             displayNextQuestion(currentGenre.GenreQuestions().get(currentQuestionIndex));
         } else if(null != currentGenre) {
-            ProcessUserAnswer(input);
+            processUserAnswer(input);
             currentQuestionIndex++;
 
             if(currentGenre.GenreQuestions().size() == currentQuestionIndex) {
