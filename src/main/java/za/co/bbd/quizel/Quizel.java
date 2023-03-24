@@ -24,7 +24,7 @@ public class Quizel
                 case "q", "quit" -> {
                     ConsoleHandler.printDoubleLineBox("\uD83D\uDC96"+"Thank you for playing!!"+"\uD83D\uDC96");
                     commandHandler.printScore();
-                    commandHandler.CloseProgram();
+                    commandHandler.closeProgram();
                     running = false;
                 }
                 default -> commandHandler.handleResponse(input);
