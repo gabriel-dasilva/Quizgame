@@ -30,13 +30,10 @@ public class JsonDataMapper {
     public static List<Genre> getAllData() {
         JSONParser parser = new JSONParser();
         JSONObject gameData;
-        try {
-            try (InputStream stream = JsonDataMapper.class.getClassLoader()
-                    .getResourceAsStream("data.json")
-            ) {
-                assert stream != null;
-                gameData = (JSONObject) parser.parse(IOUtils.toString(stream, StandardCharsets.UTF_8));
-            }
+        try (InputStream stream = JsonDataMapper.class.getClassLoader()
+                .getResourceAsStream("data.json")) {
+            assert stream != null;
+            gameData = (JSONObject) parser.parse(IOUtils.toString(stream, StandardCharsets.UTF_8));
         } catch (ParseException exception) {
             log.error("Failed to parse Json", exception);
             return new ArrayList<Genre>();
