@@ -22,7 +22,7 @@ public class Quizel
             switch (input) {
                 case "m", "menu" -> commandHandler.restartQuiz();
                 case "q", "quit" -> {
-                    ConsoleHandler.printDoubleLineBox("\uD83D\uDC96"+"Thank you for playing!!"+"\uD83D\uDC96");
+                    ConsoleHandler.printDoubleLineBox(ConsoleHandler.heart+"Thank you for playing!!"+ConsoleHandler.heart);
                     commandHandler.printScore();
                     commandHandler.closeProgram();
                     running = false;

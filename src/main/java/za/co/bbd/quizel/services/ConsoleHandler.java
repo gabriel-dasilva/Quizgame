@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class ConsoleHandler {
     private static final Logger log = LoggerFactory.getLogger(ConsoleHandler.class);
     private static final Scanner sc = new Scanner(System.in);
+    public static final String sadFace = "\uD83D\uDE13";
+    public static final String confetti = "\uD83C\uDF89";
+    public static final String happyFace = "\uD83E\uDD73";
+    public static final String heart= "\uD83D\uDC96";
 
     private ConsoleHandler() {
     }

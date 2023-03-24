@@ -20,10 +20,10 @@ public class Commands {
 
     private void processUserAnswer(String userAnswer){
         if(userAnswer.equalsIgnoreCase(currentCorrectAnswer)) {
-            ConsoleHandler.printSingleLineBox("\uD83C\uDF89"+"\uD83E\uDD73" + "Correct Answer" + "\uD83E\uDD73"+"\uD83C\uDF89");
+            ConsoleHandler.printSingleLineBox(ConsoleHandler.confetti+ ConsoleHandler.happyFace + "Correct Answer" + ConsoleHandler.happyFace + ConsoleHandler.confetti);
             result.incrementCorrectAnswers();
         } else {
-            ConsoleHandler.printSingleLineBox("                 \uD83D\uDE13"+ "Wrong Answer"+ "\uD83D\uDE13"+ "\n" + "                 Correct Answer is: " + currentCorrectAnswer);
+            ConsoleHandler.printSingleLineBox("                 "+ ConsoleHandler.sadFace + "Wrong Answer"+ ConsoleHandler.sadFace + "\n" + "                 Correct Answer is: " + currentCorrectAnswer);
             result.incrementWrongAnswers();
         }
     }
@@ -58,6 +58,7 @@ public class Commands {
 
             if(currentGenre.GenreQuestions().size() == currentQuestionIndex) {
                 resetGenre();
+                ConsoleHandler.printDoubleLineBox(ConsoleHandler.heart+ "Thank you for playing!!"+ConsoleHandler.heart);
                 result.showResult();
                 printCategories();
             } else {
