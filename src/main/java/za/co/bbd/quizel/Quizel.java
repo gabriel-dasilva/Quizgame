@@ -17,12 +17,12 @@ public class Quizel
 
         boolean running = true;
         while(running) {
-            String input = ConsoleHandler.getInputText("selection").toLowerCase();
+            String input = ConsoleHandler.getInputText("Selection").toLowerCase();
 
             switch (input) {
                 case "m", "menu" -> commandHandler.restartQuiz();
                 case "q", "quit" -> {
-                    ConsoleHandler.printDoubleLineBox("Thank you for playing");
+                    ConsoleHandler.printDoubleLineBox("\uD83D\uDC96"+"Thank you for playing!!"+"\uD83D\uDC96");
                     commandHandler.printScore();
                     commandHandler.CloseProgram();
                     running = false;

@@ -66,13 +66,6 @@ public class ConsoleHandler {
         return leftString + " ".repeat(numberOfSpaces) + rightString;
     }
 
-    public static void printOptions(List<String> options) {
-        int index = 1;
-        for(String option : options) {
-            print(index + ". " + option);
-        }
-    }
-
     /**
      * Gets user input text
      *
@@ -96,16 +89,6 @@ public class ConsoleHandler {
         }
 
         return input.trim();
-    }
-
-    public static String getUserAnswer(String question, Map<String, String> options) {
-        while(true) {
-            try {
-                return getInputText("Answer");
-            } catch (IllegalArgumentException exception) {
-                print("10 attempts reached. Please select valid answer");
-            }
-        }
     }
 
     private static void printInputLabel(String label) {

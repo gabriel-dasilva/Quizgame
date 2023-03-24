@@ -11,7 +11,6 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Commands {
-    private static final Logger log = LoggerFactory.getLogger(Commands.class);
     private static final List<Genre> categories = JsonDataMapper.getAllData();;
     private static int currentQuestionIndex = 0;
     private String currentCorrectAnswer = null;
@@ -21,10 +20,10 @@ public class Commands {
 
     private void ProcessUserAnswer(String userAnswer){
         if(userAnswer.equalsIgnoreCase(currentCorrectAnswer)) {
-            ConsoleHandler.printSingleLineBox("Correct Answer");
+            ConsoleHandler.printSingleLineBox("\uD83C\uDF89"+"\uD83E\uDD73" + "Correct Answer" + "\uD83E\uDD73"+"\uD83C\uDF89");
             result.incrementCorrectAnswers();
         } else {
-            ConsoleHandler.printSingleLineBox("Wrong Answer");
+            ConsoleHandler.printSingleLineBox("                 \uD83D\uDE13"+ "Wrong Answer"+ "\uD83D\uDE13"+ "\n" + "                 Correct Answer is: " + currentCorrectAnswer);
             result.incrementWrongAnswers();
         }
     }
@@ -58,7 +57,6 @@ public class Commands {
             currentQuestionIndex++;
 
             if(currentGenre.GenreQuestions().size() == currentQuestionIndex) {
-                log.info("Resetting the genre: {}", currentQuestionIndex);
                 resetGenre();
                 result.showResult();
                 printCategories();
